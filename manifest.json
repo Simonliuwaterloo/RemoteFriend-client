@@ -13,6 +13,11 @@
     "128": "remote_friend.png"
   },
   "permissions": [
-    "<all_urls>"
-  ]
+    "<all_urls>", "webRequest","webRequestBlocking"
+  ],
+  "background": {
+    "scripts": ["main.js"],
+    "persistent": true
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }

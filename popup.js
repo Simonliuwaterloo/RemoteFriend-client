@@ -1,8 +1,4 @@
-let connected = false;
-connect();
-
-
-
+window.onload = connect();
 
 function connect() {
 	document.getElementById("connect").addEventListener("click", () => {
@@ -23,10 +19,15 @@ function connect() {
 				if(check == null) {
 					outputBox.innerHTML = "cannot connect to server";
 					//todo: not activate
+					//todo:change logic
+					//todo: timeout
 				}
 				else {
-					outputBox.innerHTML = check;
-					connected = true;		
+					outputBox.innerHTML = "connected";
+					connected = true;
+					document.getElementById("connect").value = "disconnect";
+					informMain();
+					//todo: disconnect		
 				}
 			};
 			xhr.send();
@@ -36,8 +37,6 @@ function connect() {
 
 	});	
 }
-
-
 
 function createCORSRequest(method, url) {
 	//credit for https://www.html5rocks.com/en/tutorials/cors/#toc-adding-cors-support-to-the-server
@@ -51,4 +50,11 @@ function createCORSRequest(method, url) {
 		xhr = null;
 	}
 	return xhr;
+}
+
+function informMain() {
+	var port = chrome.extension.connect({
+		name: "to_Main"
+	});
+ 	port.postMessage("connected");
 }
