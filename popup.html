@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script type="text/javasrcipt">
-      function handleInfo() {
-        alert("info received");
-      }
-    </script>
-
     <style>
       body {
         background-color: #3caea3;
@@ -54,12 +48,16 @@
     </style>
   <head>
   <body>
+
     <form name="serverInfo" action="javasrcipt:handleInfo()">
       <p>Server IP:<br>
-      <input type="text" name="server"><br>
+      <input type="text" name="server" id="serverValue"><br>
       Port:<br>
-      <input type="text" name="port"><br><br>
-      <input type="submit" value="connect !" class="button">
+      <input type="text" name="port" id="portValue"><br><br>
+      <input type="submit" value="connect !" class="button" id="connect">
     </p>
+    </form>
+      <div id="connection_message"></div>
+      <script type="text/javascript" src="connection_message.js"></script>
   </body>
 </html>

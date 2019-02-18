@@ -11,5 +11,8 @@
   },
   "icons": {
     "128": "remote_friend.png"
-  }
+  },
+  "permissions": [
+    "<all_urls>"
+  ]
 }
