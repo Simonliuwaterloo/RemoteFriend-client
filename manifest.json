@@ -1,0 +1,15 @@
+{
+  "name": "remote friend",
+  "version": "1.0",
+  "description": "redirect your http request to your friend's server",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "remote_friend.png"
+    }
+  },
+  "icons": {
+    "128": "remote_friend.png"
+  }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javasrcipt">
+      function handleInfo() {
+        alert("info received");
+      }
+    </script>
+
+    <style>
+      body {
+        background-color: #3caea3;
+      }
+
+      input[type=text] {
+        padding: 2px 12px;
+        border: 2px solid #ED553B;
+        background-color: #3caea3;
+      }
+
+      input[type=submit] {
+        padding: 5px 5px;
+        font-weight: 800;
+        border-color: #ED553B;
+        background-color: inherit;
+      }
+
+      input[type=submit]:hover {
+        padding: 5px 5px;
+        font-weight: 800;
+
+        background-color: #ED553B;
+      }
+
+
+
+      p {
+        font-family: Futura,Trebuchet MS,Arial,sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        color: #ED553B;
+        line-height: 150%;
+      }
+
+      .button {
+        color: #ED553B;
+        width: 50%;
+        font-size: 16px;
+      }
+
+      .button:hover {
+        color: #3caea3;
+      }
+    </style>
+  <head>
+  <body>
+    <form name="serverInfo" action="javasrcipt:handleInfo()">
+      <p>Server IP:<br>
+      <input type="text" name="server"><br>
+      Port:<br>
+      <input type="text" name="port"><br><br>
+      <input type="submit" value="connect !" class="button">
+    </p>
+  </body>
+</html>
