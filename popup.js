@@ -26,7 +26,7 @@ function connect() {
 					outputBox.innerHTML = "connected";
 					connected = true;
 					document.getElementById("connect").value = "disconnect";
-					informMain();
+					informMain(`${serverIP}:${serverPort}`);
 					//todo: disconnect		
 				}
 			};
@@ -52,9 +52,9 @@ function createCORSRequest(method, url) {
 	return xhr;
 }
 
-function informMain() {
+function informMain(url) {
 	var port = chrome.extension.connect({
 		name: "to_Main"
 	});
- 	port.postMessage("connected");
+ 	port.postMessage(url);
 }
